@@ -14,21 +14,28 @@ class AirportsContainer extends Component {
   }
   render() {
     return (
-      <React.Fragment>
+      <section>
         <h1>Spain Airports</h1>
+        <hr/>
         <Table
           className="airports-table"
           dataColumns={['name', 'country', 'city', 'geolocation']}
           dataRows={this.props.airportList}
         />
-      </React.Fragment>
+      </section>
     )
 
   }
 };
 
-export default connect((state) => {
+const mapStateToProps = (state) => {
   return {
     airportList: state.airport.airportList
   }
-}, {loadAirports})(AirportsContainer);
+}
+
+const mapDispatchToProps = {
+    loadAirports
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AirportsContainer);
