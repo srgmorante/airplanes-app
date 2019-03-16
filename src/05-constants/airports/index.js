@@ -1,0 +1,1 @@
+export const LOAD_AIRPORTS = 'LOAD_AIRPORTS';
