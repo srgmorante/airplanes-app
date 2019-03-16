@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Provider } from 'react-redux';
+
+import store from './04-reducers/store';
 
 import './App.css';
 
@@ -11,15 +14,17 @@ import HeaderComponent from './00-components/header';
 class App extends Component {
   render() {
     return (
-      <Router>
-        <div className="App">
-          <HeaderComponent />
+      <Provider store={store}>
+        <Router>
+          <div className="App">
+            <HeaderComponent />
 
-          <Route path="/" exact component={HomeContainer} />
-          <Route path="/airports/" component={AirportsContainer} />
-          <Route path="/contact/" component={ContactContainer} />
-        </div>
-      </Router>
+            <Route path="/" exact component={HomeContainer} />
+            <Route path="/airports/" component={AirportsContainer} />
+            <Route path="/contact/" component={ContactContainer} />
+          </div>
+        </Router>
+      </Provider>
 
     );
   }
