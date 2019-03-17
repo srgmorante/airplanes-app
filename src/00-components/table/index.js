@@ -1,18 +1,18 @@
 import React from 'react';
 
-export default ({dataColumns, dataRows, className}) => {
+export default ({ columns = [], dataSource = [], className }) => {
   const tableHeaders = (
     <thead>
         <tr>
-          {dataColumns.map((column, index) => (<th key={index}>{column}</th>))}      
+          {columns.map((column, index) => (<th key={index}>{column}</th>))}      
         </tr>
     </thead>
   );
 
-  const tableBody = dataRows.map((row, index) => {
+  const tableBody = dataSource.map((row, index) => {
     return (
       <tr key={index}>
-        {dataColumns.map((column, index) => {
+        {columns.map((column, index) => {
           return <td key={index}>{row[column]}</td>; })}
       </tr>); }
     );
