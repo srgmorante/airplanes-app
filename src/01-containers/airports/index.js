@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // Components
-import Table from '../../00-components/table-component';
+import Table from '../../00-components/table';
 // Styles
 import './index.css'
 // Actions
@@ -19,8 +19,8 @@ class AirportsContainer extends Component {
         <hr/>
         <Table
           className="airports-table"
-          dataColumns={['name', 'country', 'city', 'geolocation']}
-          dataRows={this.props.airportList}
+          columns={['name', 'country', 'city', 'geolocation']}
+          dataSource={this.props.airportList}
         />
       </section>
     )
@@ -35,7 +35,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = {
-    loadAirports
+  loadAirports
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(AirportsContainer);
