@@ -18,10 +18,11 @@ class App extends Component {
         <Router>
           <div className="App">
             <HeaderComponent />
-
-            <Route path="/" exact component={HomeContainer} />
-            <Route path="/airports/" component={AirportsContainer} />
-            <Route path="/contact/" component={ContactContainer} />
+            <main>
+              <Route path="/" exact component={HomeContainer} />
+              <Route path="/airports/" component={AirportsContainer} />
+              <Route path="/contact/" component={ContactContainer} />
+            </main>
           </div>
         </Router>
       </Provider>
