@@ -16,7 +16,6 @@ class AirportsContainer extends Component {
     return (
       <section>
         <h1>Spain Airports</h1>
-        <hr/>
         <Table
           className="airports-table"
           columns={['name', 'country', 'city', 'geolocation']}
