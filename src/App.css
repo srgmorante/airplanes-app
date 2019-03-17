@@ -1,6 +1,9 @@
 .App {
   --app-primary-color: #89c6ed;
   --app-background-color: #fafafa;
+  --app-font-color: #fafafa;
+  --app-font-size-desktop: 16px;
+  --app-font-size-mobile: 8px;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -14,4 +17,20 @@
 
 main {
   background: var(--app-background-color, lightgrey);
+}
+
+section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+@media (min-width: 460px) {
+  section {
+    padding: 60px;
+  }
 }

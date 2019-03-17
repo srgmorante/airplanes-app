@@ -1,25 +1,24 @@
-section {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 60px;
-}
-
 
 .airports-table {
   border-collapse: collapse;
 }
 .airports-table td {
   border-bottom: 1px solid black;
-  padding: 15px;
+  padding: 0 10px;
+  font-size: 8px;
   text-align: center;
 }
 
 .airports-table th {
   text-transform: uppercase;
-  padding: 15px;
+  padding: 0 10px;
+  font-size: 8px;
 }
 
+@media (min-width: 460px) {
+  .airports-table th,
+  .airports-table td {
+    padding: 15px;
+    font-size: 16px;
+  }
+}
