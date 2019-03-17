@@ -1,0 +1,24 @@
+
+.airports-table {
+  border-collapse: collapse;
+}
+.airports-table td {
+  border-bottom: 1px solid black;
+  padding: 0 10px;
+  font-size: 8px;
+  text-align: center;
+}
+
+.airports-table th {
+  text-transform: uppercase;
+  padding: 0 10px;
+  font-size: 8px;
+}
+
+@media (min-width: 460px) {
+  .airports-table th,
+  .airports-table td {
+    padding: 15px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,31 @@
+.App {
+  --app-primary-color: #89c6ed;
+  --app-background-color: #fafafa;
+  --app-font-color: #fafafa;
+  --app-font-size-desktop: 16px;
+  --app-font-size-mobile: 8px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px 1fr;
+  grid-template-areas: 
+    "header"
+    "main";
+  min-height: 100vh;
+  width: 100%;
+}
+
+main {
+  background: var(--app-background-color, lightgrey);
+}
+
+section {
+  text-align: center;
+  padding: 15px;
+}
+
+@media (min-width: 460px) {
+  section {
+    padding: 60px;
+  }
+}
